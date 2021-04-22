@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Theme</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<div class="container">
+		<h2>Add theme</h2>
+		<div class="col-md-4">
+		<form th:object="${theme}" th:action="@{savetheme}" action="#" method="post">
+		  	<label for="tname">Theme name</label>
+			<input type="text" id="tname" th:field="*{themename}" class="form-control"/>
+		
+			
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" class="btn btn-primary" value="Save"></input>
+		</form>
+		</div>
+	</div>
+</body>
+</html>

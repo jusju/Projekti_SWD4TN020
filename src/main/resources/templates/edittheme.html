@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <title>Edit</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+</head>
+<body>
+	<h2>Edit theme</h2>
+	<div>
+	
+	
+		<form th:object="${theme}" th:action="@{/savetheme}" action="#" method="post">
+		  	<label for="themename">Title</label>
+			<input type="text" id="themename" th:field="*{themename}" />
+			
+			<div style="clear: both; display: block; height: 10px;"></div>
+				
+			
+			<label for="id"></label>
+			<input type="hidden" th:field="*{themeid}" />
+			
+				
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" value="Save"></input>
+			
+			
+		</form>
+	</div>
+</body>
+</html>
