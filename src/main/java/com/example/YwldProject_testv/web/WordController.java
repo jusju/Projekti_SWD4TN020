@@ -78,6 +78,7 @@ public class WordController {
    		List<WordAndTranslation> wordsOfTheme = wrepository.findByTheme(theme);
         System.out.println("JUKKAJUKKAJUKS");
    		System.out.println(wordsOfTheme);
+   		model.addAttribute("words", wordsOfTheme);
    		return "theme";
      }
      
