@@ -72,12 +72,13 @@ public class WordController {
      //--------------------------------------------------------------
      //6. 
      @RequestMapping(value = "/theme/{id}/words", method =RequestMethod.GET)
-     
      public String themeWords(@PathVariable("id") Long themeid, Model model){
      	Optional<Theme> theme = repository.findById(themeid); 	
-   		 model.addAttribute("theme", theme);	
-   		
-           return "theme";
+   		model.addAttribute("theme", theme);	
+   		List<WordAndTranslation> wordsOfTheme = wrepository.findByTheme(theme);
+        System.out.println("JUKKAJUKKAJUKS");
+   		System.out.println(wordsOfTheme);
+   		return "theme";
      }
      
      //-----------------------------------------------------

@@ -26,8 +26,6 @@ public class WordAndTranslation {
     @ManyToOne
     @JsonIgnore
     @JoinColumn(name = "themeid") 
-    
-   
     private Theme theme;
 
     
